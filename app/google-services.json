@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "751665176385",
+    "firebase_url": "https://bringon-1353.firebaseio.com",
+    "project_id": "bringon-1353",
+    "storage_bucket": "bringon-1353.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751665176385:android:ead11c7321242089",
+        "android_client_info": {
+          "package_name": "br.com.pedrosousa.bringon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751665176385-oguod0bmt4vulba8dogo1mp00k4d1psl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.pedrosousa.bringon",
+            "certificate_hash": "BC25E2D96D895421F2F17E0C6F34B78C3D2CDB20"
+          }
+        },
+        {
+          "client_id": "751665176385-so4h0dsjmds7odd4muo4o484lg21bor7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdlw6DhFw_aSmrOOQ2MUclwZpsuT8S7Jg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751665176385-so4h0dsjmds7odd4muo4o484lg21bor7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

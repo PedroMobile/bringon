@@ -38,4 +38,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.1.0'
     // Google Play services APIs
     compile 'com.google.android.gms:play-services:9.0.2'
+
 }
+apply plugin: 'com.google.gms.google-services'
