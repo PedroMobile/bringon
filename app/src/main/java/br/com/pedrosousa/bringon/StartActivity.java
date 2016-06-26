@@ -12,7 +12,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class StartActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
