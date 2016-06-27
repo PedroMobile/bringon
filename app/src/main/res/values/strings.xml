@@ -14,6 +14,7 @@
     <string name="hint_login">Email</string>
     <string name="hint_password">Senha</string>
     <string name="btn_login">ENTRAR</string>
+    <string name="btn_signup">CADASTRAR</string>
     <string name="btn_facebook">ENTRAR COM FACEBOOK</string>
     <string name="new_user"><![CDATA[Novo usuário? <u>Cadastre-se</u>]]></string>
 
