@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import br.com.pedrosousa.bringon.fragment.SigninFragment;
+import br.com.pedrosousa.bringon.fragment.SigninSignupFragment;
 import butterknife.ButterKnife;
 
 public class SigninSignupActivity extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class SigninSignupActivity extends AppCompatActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            SigninFragment signinFragment = new SigninFragment();
+            SigninSignupFragment signinFragment = new SigninSignupFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
@@ -40,11 +41,10 @@ public class SigninSignupActivity extends AppCompatActivity {
 
     public void openFragment(Fragment fragment){
         Bundle args = new Bundle();
-        //args.putInt(SignupFragment.ARG_POSITION, position);
         fragment.setArguments(args);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
+        transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         transaction.replace(R.id.fragment_container, fragment);

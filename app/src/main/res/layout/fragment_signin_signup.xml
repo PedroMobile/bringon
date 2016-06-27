@@ -9,10 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:padding="@dimen/margin_default"
+        android:gravity="bottom"
+        android:padding="@dimen/margin_half_large"
         android:weightSum="2">
 
         <info.hoang8f.widget.FButton
@@ -20,24 +20,23 @@
             android:text="@string/btn_login"
             android:layout_weight="1"
             android:textColor="@color/fbutton_color_clouds"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             fbutton:buttonColor="@color/fbutton_color_peter_river"
             fbutton:shadowColor="@color/fbutton_color_belize_hole"
-            android:layout_margin="@dimen/margin_half"
             fbutton:shadowEnabled="true"
             fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="5dp"/>
+            fbutton:cornerRadius="5dp"
+            android:layout_marginRight="@dimen/margin_default"/>
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_signup"
             android:text="@string/btn_signup"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             fbutton:buttonColor="@color/fbutton_color_clouds"
             fbutton:shadowColor="@color/fbutton_color_silver"
-            android:layout_margin="@dimen/margin_half"
             fbutton:shadowEnabled="true"
             fbutton:shadowHeight="5dp"
             fbutton:cornerRadius="5dp"/>
