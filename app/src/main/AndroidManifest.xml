@@ -40,7 +40,7 @@
         </activity>
         <activity
             android:name=".SigninSignupActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:theme="@style/AppTheme.NoTitle"/>
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"

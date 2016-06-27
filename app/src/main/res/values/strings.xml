@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bringon</string>
+    <string name="app_name">BringOn</string>
 
     <!--    Permissions    -->
     <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
@@ -9,6 +9,13 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Signin -->
+    <string name="hint_login">Email</string>
+    <string name="hint_password">Senha</string>
+    <string name="btn_login">ENTRAR</string>
+    <string name="btn_facebook">ENTRAR COM FACEBOOK</string>
+    <string name="new_user"><![CDATA[Novo usuário? <u>Cadastre-se</u>]]></string>
 
     <string name="action_settings">Settings</string>
 </resources>
