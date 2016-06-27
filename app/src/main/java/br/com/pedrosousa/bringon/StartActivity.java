@@ -20,9 +20,6 @@ import butterknife.ButterKnife;
 
 public class StartActivity extends AppCompatActivity {
 
-    private static final String TAG = "FirebaseLogin";
-    private FirebaseAuth.AuthStateListener mAuthListener;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,13 +37,13 @@ public class StartActivity extends AppCompatActivity {
 
     private void init(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        Intent intent;
         if (user != null) {
-            Intent intent = new Intent(this, NavigationActivity.class);
-            startActivity(intent);
+            intent = new Intent(this, NavigationActivity.class);
         } else {
-            Intent intent = new Intent(this, SigninSignupActivity.class);
-            startActivity(intent);
+            intent = new Intent(this, SigninSignupActivity.class);
         }
+        startActivity(intent);
     }
 
     /*@Override

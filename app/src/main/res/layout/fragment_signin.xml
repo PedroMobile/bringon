@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:fbutton="http://schemas.android.com/apk/res-auto"
-    tools:context="br.com.pedrosousa.bringon.SigninSignupActivity">
+    tools:context="br.com.pedrosousa.bringon.SigninSignupActivity"
+    android:background="@color/transparent_black">
 
     <include layout="@layout/fragment_logo"/>
 
@@ -25,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
+            android:inputType="textPassword"
             android:layout_marginBottom="@dimen/margin_default"
             android:singleLine="true"/>
 
@@ -62,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gray_lighter"
             android:paddingTop="@dimen/margin_default"
             android:paddingBottom="@dimen/margin_default"
             android:text="@string/new_user"/>
