@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    tools:context="br.com.pedrosousa.bringon.SigninSignupActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_larger"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_half"
+            android:src="@mipmap/ic_shop"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="48sp"
+            android:text="@string/app_name"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingLeft="@dimen/margin_large"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_login"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:singleLine="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:singleLine="true"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btn_signin"
+            android:text="@string/btn_login"
+            android:textColor="@color/fbutton_color_clouds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fbutton:buttonColor="@color/fbutton_color_peter_river"
+            fbutton:shadowColor="@color/fbutton_color_belize_hole"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp"
+            fbutton:cornerRadius="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btn_facebook"
+            android:text="@string/btn_facebook"
+            android:textColor="@color/fbutton_color_clouds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_facebook"
+            android:paddingLeft="@dimen/margin_half"
+            android:paddingRight="@dimen/margin_half"
+            fbutton:buttonColor="@color/colorPrimary"
+            fbutton:shadowColor="@color/colorPrimaryDark"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp"
+            fbutton:cornerRadius="5dp"/>
+
+        <br.com.pedrosousa.bringon.widget.HTMLTextView
+            android:id="@+id/txt_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_default"
+            android:paddingBottom="@dimen/margin_default"
+            android:text="@string/new_user"/>
+    </LinearLayout>
+
+</RelativeLayout>
