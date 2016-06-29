@@ -11,6 +11,9 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        // Enabling multidex support.
+        multiDexEnabled true
     }
     signingConfigs {
 
@@ -39,9 +42,12 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.0.1'
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
     // Google Play services APIs
-    compile 'com.google.android.gms:play-services:9.0.2'
+    compile 'com.google.android.gms:play-services:9.2.0'
     //Flat Button
     compile 'info.hoang8f:fbutton:1.0.5'
+
+    // Enabling multidex support.
+    compile 'com.android.support:multidex:1.0.1'
 
 }
 apply plugin: 'com.google.gms.google-services'

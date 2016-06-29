@@ -35,13 +35,11 @@
             android:textColor="@color/fbutton_color_clouds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            fbutton:theme="@style/textbold"
             fbutton:buttonColor="@color/fbutton_color_peter_river"
             fbutton:shadowColor="@color/fbutton_color_belize_hole"
             android:layout_marginTop="@dimen/margin_default"
-            android:layout_marginBottom="@dimen/margin_default"
-            fbutton:shadowEnabled="true"
-            fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="5dp"/>
+            android:layout_marginBottom="@dimen/margin_default"/>
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_facebook"
@@ -53,9 +51,7 @@
             android:paddingLeft="@dimen/margin_half"
             android:paddingRight="@dimen/margin_half"
             fbutton:buttonColor="@color/facebook"
-            fbutton:shadowEnabled="true"
-            fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="5dp"/>
+            fbutton:theme="@style/textbold"/>
 
         <br.com.pedrosousa.bringon.widget.HTMLTextView
             android:id="@+id/txt_signup"

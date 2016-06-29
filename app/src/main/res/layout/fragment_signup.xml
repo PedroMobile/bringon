@@ -61,9 +61,7 @@
             fbutton:shadowColor="@color/fbutton_color_belize_hole"
             android:layout_marginTop="@dimen/margin_default"
             android:layout_marginBottom="@dimen/margin_default"
-            fbutton:shadowEnabled="true"
-            fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="5dp"/>
+            fbutton:theme="@style/textbold"/>
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_signup_facebook"
@@ -74,11 +72,8 @@
             android:drawableLeft="@mipmap/ic_facebook"
             android:paddingLeft="@dimen/margin_half"
             android:paddingRight="@dimen/margin_half"
-            fbutton:buttonColor="@color/colorPrimary"
-            fbutton:shadowColor="@color/colorPrimaryDark"
-            fbutton:shadowEnabled="true"
-            fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="5dp"/>
+            fbutton:buttonColor="@color/facebook"
+            fbutton:theme="@style/textbold"/>
 
         <br.com.pedrosousa.bringon.widget.HTMLTextView
             android:id="@+id/txt_go_signin"

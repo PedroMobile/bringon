@@ -20,7 +20,6 @@
 
         <item name="editTextStyle">@style/App_EditTextStyle</item>
         <item name="colorPrimaryDark">@color/transparent_black</item>
-        <item name="colorControlNormal">@color/gray_light</item>
         <item name="windowNoTitle">true</item>
         <!-- Support library compatibility -->
         <item name="actionBarStyle">@style/MyActionBar</item>
@@ -36,6 +35,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+    </style>
+
+    <style name="textbold" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
     </style>
 
     <!-- ACTION BAR STYLES -->
