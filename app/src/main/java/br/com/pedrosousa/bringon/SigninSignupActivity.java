@@ -30,10 +30,6 @@ public class SigninSignupActivity extends AppCompatActivity {
             // Create a new Fragment to be placed in the activity layout
             SigninSignupFragment signinSignupFragment = new SigninSignupFragment();
 
-            // In case this activity was started with special instructions from an
-            // Intent, pass the Intent's extras to the fragment as arguments
-            signinSignupFragment.setArguments(getIntent().getExtras());
-
             // Add the fragment to the 'fragment_container' FrameLayout
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.add(R.id.fragment_container, signinSignupFragment);
@@ -51,6 +47,7 @@ public class SigninSignupActivity extends AppCompatActivity {
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         transaction.replace(R.id.fragment_container, fragment);
+
         transaction.addToBackStack(null);
 
         // Commit the transaction
