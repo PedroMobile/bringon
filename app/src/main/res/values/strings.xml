@@ -13,10 +13,16 @@
     <!-- Signin -->
     <string name="hint_login">Email</string>
     <string name="hint_password">Senha</string>
+    <string name="hint_username">Nome</string>
     <string name="btn_login">ENTRAR</string>
+    <string name="btn_reg">CADASTRAR</string>
+    <string name="btn_reg_facebook">CADASTRAR COM FACEBOOK</string>
     <string name="btn_signup">CADASTRAR</string>
     <string name="btn_facebook">ENTRAR COM FACEBOOK</string>
     <string name="new_user"><![CDATA[Novo usuário? <u>Cadastre-se</u>]]></string>
 
     <string name="action_settings">Settings</string>
+    <string name="go_signin"><![CDATA[Ja tem uma conta? <u>Entre</u>]]></string>
+    <string name="radio_store">Loja</string>
+    <string name="radio_cliente">Cliente</string>
 </resources>

@@ -2,6 +2,91 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent_black">
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto">
 
+    <include layout="@layout/fragment_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingLeft="@dimen/margin_large"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_login"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:singleLine="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_username"
+            android:inputType="textPassword"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:singleLine="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:singleLine="true"/>
+        <RadioGroup
+            android:id="@+id/radio_type_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_store"
+                android:id="@+id/radio_store" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_cliente"
+                android:id="@+id/radio_cliente"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btn_signup"
+            android:text="@string/btn_reg"
+            android:textColor="@color/fbutton_color_clouds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fbutton:buttonColor="@color/fbutton_color_peter_river"
+            fbutton:shadowColor="@color/fbutton_color_belize_hole"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp"
+            fbutton:cornerRadius="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btn_signup_facebook"
+            android:text="@string/btn_reg_facebook"
+            android:textColor="@color/fbutton_color_clouds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_facebook"
+            android:paddingLeft="@dimen/margin_half"
+            android:paddingRight="@dimen/margin_half"
+            fbutton:buttonColor="@color/colorPrimary"
+            fbutton:shadowColor="@color/colorPrimaryDark"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp"
+            fbutton:cornerRadius="5dp"/>
+
+        <br.com.pedrosousa.bringon.widget.HTMLTextView
+            android:id="@+id/txt_go_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_default"
+            android:paddingBottom="@dimen/margin_default"
+            android:text="@string/go_signin"/>
+    </LinearLayout>
 </RelativeLayout>
