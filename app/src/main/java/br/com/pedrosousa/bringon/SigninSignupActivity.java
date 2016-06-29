@@ -26,7 +26,6 @@ public class SigninSignupActivity extends AppCompatActivity {
             if (savedInstanceState != null) {
                 return;
             }
-
             // Create a new Fragment to be placed in the activity layout
             SigninSignupFragment signinSignupFragment = new SigninSignupFragment();
 

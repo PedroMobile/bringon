@@ -25,4 +25,10 @@
     <string name="go_signin"><![CDATA[Ja tem uma conta? <u>Entre</u>]]></string>
     <string name="radio_store">Loja</string>
     <string name="radio_cliente">Cliente</string>
+    <string name="settings">Configurações</string>
+    <string name="share">Compartilhar</string>
+    <string name="sign_out">Sair</string>
+    <string name="markets">Mercados</string>
+    <string name="my_account">Minha conta</string>
+    <string name="my_carts">Meus carrinhos</string>
 </resources>
