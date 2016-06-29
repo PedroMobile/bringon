@@ -19,7 +19,7 @@ import butterknife.Unbinder;
 public class SigninSignupFragment extends Fragment {
 
     private Unbinder unbinder;
-    private String TAG = "SIGNIN_FRAGMENT";
+    public static String TAG = "SigninSignup";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

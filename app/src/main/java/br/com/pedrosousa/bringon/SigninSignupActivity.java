@@ -1,6 +1,7 @@
 package br.com.pedrosousa.bringon;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,15 +28,17 @@ public class SigninSignupActivity extends AppCompatActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            SigninSignupFragment signinFragment = new SigninSignupFragment();
+            SigninSignupFragment signinSignupFragment = new SigninSignupFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
-            signinFragment.setArguments(getIntent().getExtras());
+            signinSignupFragment.setArguments(getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, signinFragment).commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.fragment_container, signinSignupFragment);
+
+            transaction.commit();
         }
     }
 
@@ -52,5 +55,14 @@ public class SigninSignupActivity extends AppCompatActivity {
 
         // Commit the transaction
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            this.finish();
+        } else {
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        }
     }
 }
