@@ -1,6 +1,8 @@
 package br.com.pedrosousa.bringon.fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import butterknife.ButterKnife;
  */
 public class MapMarketsFragment extends BaseNavFragment implements OnMapReadyCallback {
     private String TAG = "MapMarketsFragment";
+    MapFragment mapFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,8 +37,7 @@ public class MapMarketsFragment extends BaseNavFragment implements OnMapReadyCal
     private void init(){
         getNavActivity().getSupportActionBar().setTitle(R.string.markets);
 
-        MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager()
-                .findFragmentById(R.id.map);
+        mapFragment = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -51,5 +53,12 @@ public class MapMarketsFragment extends BaseNavFragment implements OnMapReadyCal
                 .title("Sydney")
                 .snippet("The most populous city in Australia.")
                 .position(sydney));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        getActivity().getFragmentManager().beginTransaction()
+                .remove(mapFragment).commit();
     }
 }

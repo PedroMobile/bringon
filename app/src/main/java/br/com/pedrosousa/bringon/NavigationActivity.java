@@ -1,8 +1,8 @@
 package br.com.pedrosousa.bringon;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,8 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import br.com.pedrosousa.bringon.fragment.CartsFragment;
 import br.com.pedrosousa.bringon.fragment.MapMarketsFragment;
-import br.com.pedrosousa.bringon.fragment.SigninSignupFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -21,6 +21,7 @@ public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "NAV_ACTIVITY";
+    private static int menuItemId = 0;
 
     @BindView(R.id.toolbar)
     public Toolbar toolbar;
@@ -45,24 +46,8 @@ public class NavigationActivity extends AppCompatActivity
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        init(savedInstanceState);
-    }
-
-    private void init(Bundle savedInstanceState){
-        if (findViewById(R.id.fragment_container) != null) {
-
-            if (savedInstanceState != null) {
-                return;
-            }
-            // Create a new Fragment to be placed in the activity layout
-            MapMarketsFragment mapMarketsFragment = new MapMarketsFragment();
-
-            // Add the fragment to the 'fragment_container' FrameLayout
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.add(R.id.fragment_container, mapMarketsFragment);
-            transaction.commit();
-        }
+        navigationView.getMenu().getItem(0).setChecked(true);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
     }
 
     @Override
@@ -101,24 +86,48 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_map) {
-            Log.i(TAG, "Teste");
-            // Handle the camera action
-        } else if (id == R.id.nav_carts) {
-
-        } else if (id == R.id.nav_account) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_settings) {
-
-        }else if (id == R.id.nav_sign_out) {
-
+        if (menuItemId == item.getItemId()) {
+            drawer.closeDrawer(GravityCompat.START);
+            return false;
         }
+
+        menuItemId = item.getItemId();
+        selectItem();
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void selectItem(){
+        if (menuItemId == R.id.nav_map) {
+            replaceFragment(new MapMarketsFragment());
+        } else if (menuItemId == R.id.nav_carts) {
+            replaceFragment(new CartsFragment());
+        } else if (menuItemId == R.id.nav_account) {
+
+        } else if (menuItemId == R.id.nav_share) {
+
+        } else if (menuItemId == R.id.nav_settings) {
+
+        }else if (menuItemId == R.id.nav_sign_out) {
+
+        }
+    }
+
+    public void replaceFragment(Fragment fragment){
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
+        // Replace whatever is in the fragment_container view with this fragment,
+        // and add the transaction to the back stack so the user can navigate back
+        transaction.replace(R.id.fragment_container, fragment);
+
+        transaction.addToBackStack(null);
+
+        // Commit the transaction
+        transaction.commit();
     }
 }
