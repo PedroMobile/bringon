@@ -29,6 +29,7 @@
     <string name="share">Compartilhar</string>
     <string name="sign_out">Sair</string>
     <string name="markets">Mercados</string>
+    <string name="my_market">Meu mercado</string>
     <string name="my_account">Minha conta</string>
     <string name="my_carts">Meus carrinhos</string>
 </resources>

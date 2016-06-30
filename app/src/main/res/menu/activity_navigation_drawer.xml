@@ -4,12 +4,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_map"
-            android:icon="@mipmap/ic_market"
+            android:icon="@mipmap/ic_shopping_black_24dp"
             android:title="@string/markets" />
         <item
             android:id="@+id/nav_carts"
             android:icon="@mipmap/ic_cart"
             android:title="@string/my_carts" />
+        <item
+            android:id="@+id/nav_market"
+            android:icon="@mipmap/ic_store_black_24dp"
+            android:title="@string/my_market" />
         <item
             android:id="@+id/nav_account"
             android:icon="@mipmap/ic_account"

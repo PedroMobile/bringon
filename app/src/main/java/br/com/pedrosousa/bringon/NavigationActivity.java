@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import br.com.pedrosousa.bringon.fragment.CartsFragment;
 import br.com.pedrosousa.bringon.fragment.MapMarketsFragment;
+import br.com.pedrosousa.bringon.fragment.MyMarketFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -104,6 +105,8 @@ public class NavigationActivity extends AppCompatActivity
             replaceFragment(new MapMarketsFragment());
         } else if (menuItemId == R.id.nav_carts) {
             replaceFragment(new CartsFragment());
+        } else if (menuItemId == R.id.nav_market) {
+            replaceFragment(new MyMarketFragment());
         } else if (menuItemId == R.id.nav_account) {
 
         } else if (menuItemId == R.id.nav_share) {
