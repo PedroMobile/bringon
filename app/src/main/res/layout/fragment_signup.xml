@@ -14,12 +14,14 @@
         android:paddingLeft="@dimen/margin_large"
         android:orientation="vertical">
         <EditText
+            android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_login"
             android:layout_marginBottom="@dimen/margin_default"
             android:singleLine="true"/>
         <EditText
+            android:id="@+id/edt_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_username"
@@ -27,6 +29,7 @@
             android:layout_marginBottom="@dimen/margin_default"
             android:singleLine="true"/>
         <EditText
+            android:id="@+id/edt_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
