@@ -6,9 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import br.com.pedrosousa.bringon.R;
 import br.com.pedrosousa.bringon.SigninSignupActivity;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
@@ -21,12 +23,27 @@ public class SignupFragment extends Fragment {
     private Unbinder unbinder;
     private String TAG = "SIGNIN_FRAGMENT";
 
+    @BindView(R.id.edt_email)
+    EditText edt_email;
+
+    @BindView(R.id.edt_nome)
+    EditText edt_nome;
+
+    @BindView(R.id.edt_senha)
+    EditText edt_senha;
+
+    private String email, nome, senha;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_signup, container, false);
         unbinder = ButterKnife.bind(this, v);
+
+        email = edt_email.getText().toString();
+        nome = edt_nome.getText().toString();
+        senha = edt_senha.getText().toString();
 
         return v;
     }
