@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import br.com.pedrosousa.bringon.fragment.CartsFragment;
 import br.com.pedrosousa.bringon.fragment.MapMarketsFragment;
+import br.com.pedrosousa.bringon.fragment.MyAccountFragment;
 import br.com.pedrosousa.bringon.fragment.MyMarketFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -93,29 +94,34 @@ public class NavigationActivity extends AppCompatActivity
             return false;
         }
 
-        menuItemId = item.getItemId();
-        selectItem();
+        selectItem(item.getItemId());
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    private void selectItem(){
-        if (menuItemId == R.id.nav_map) {
+    private void selectItem(int id){
+
+        if (id == R.id.nav_map) {
+            menuItemId = id;
             replaceFragment(new MapMarketsFragment());
-        } else if (menuItemId == R.id.nav_carts) {
+        } else if (id == R.id.nav_carts) {
+            menuItemId = id;
             replaceFragment(new CartsFragment());
-        } else if (menuItemId == R.id.nav_market) {
+        } else if (id == R.id.nav_market) {
+            menuItemId = id;
             replaceFragment(new MyMarketFragment());
-        } else if (menuItemId == R.id.nav_account) {
+        } else if (id == R.id.nav_account) {
+            menuItemId = id;
+            replaceFragment(new MyAccountFragment());
+        } else if (id == R.id.nav_share) {
 
-        } else if (menuItemId == R.id.nav_share) {
+        } else if (id == R.id.nav_settings) {
 
-        } else if (menuItemId == R.id.nav_settings) {
-
-        }else if (menuItemId == R.id.nav_sign_out) {
+        } else if (id == R.id.nav_sign_out) {
 
         }
+
     }
 
     public void replaceFragment(Fragment fragment){
