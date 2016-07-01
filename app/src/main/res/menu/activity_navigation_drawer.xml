@@ -8,7 +8,7 @@
             android:title="@string/markets" />
         <item
             android:id="@+id/nav_carts"
-            android:icon="@mipmap/ic_cart"
+            android:icon="@mipmap/ic_cart_black_24dp"
             android:title="@string/my_carts" />
         <item
             android:id="@+id/nav_market"
@@ -16,7 +16,7 @@
             android:title="@string/my_market" />
         <item
             android:id="@+id/nav_account"
-            android:icon="@mipmap/ic_account"
+            android:icon="@mipmap/ic_account_black_24dp"
             android:title="@string/my_account" />
     </group>
 
@@ -24,15 +24,15 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@mipmap/ic_share"
+                android:icon="@mipmap/ic_share_variant_black_24dp"
                 android:title="@string/share" />
             <item
                 android:id="@+id/nav_settings"
-                android:icon="@mipmap/ic_settings"
+                android:icon="@mipmap/ic_settings_black_24dp"
                 android:title="@string/settings" />
             <item
                 android:id="@+id/nav_sign_out"
-                android:icon="@mipmap/ic_logout"
+                android:icon="@mipmap/ic_logout_black_24dp"
                 android:title="@string/sign_out" />
         </menu>
     </item>
