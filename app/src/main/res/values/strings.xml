@@ -32,4 +32,12 @@
     <string name="my_market">Meu mercado</string>
     <string name="my_account">Minha conta</string>
     <string name="my_carts">Meus carrinhos</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere nibh id lacus commodo, eget venenatis leo vehicula. Cras mollis, elit scelerisque pulvinar viverra, velit diam semper augue, sed blandit purus felis nec dolor. Pellentesque ut felis in nisi aliquam lacinia. Aliquam ac lectus auctor, facilisis tellus et, tincidunt velit. Duis mollis, turpis et efficitur vulputate, nisi nibh consectetur metus, eget blandit neque nisl nec diam. Nullam et tellus id nunc rhoncus aliquet eu in metus. Phasellus semper congue velit, et accumsan libero rutrum id. Sed viverra lacinia nulla. Quisque molestie, arcu eu aliquam fringilla, ante lectus pharetra erat, quis convallis ligula quam id orci. Donec imperdiet libero in magna volutpat bibendum. Ut congue tortor id gravida imperdiet. Praesent eget turpis nibh. Phasellus tincidunt pellentesque sollicitudin.
+Pellentesque sapien arcu, laoreet hendrerit purus non, efficitur accumsan ante. Integer id erat enim. Nullam elementum mi vitae vehicula sodales. Quisque vel placerat est. Quisque vehicula, ipsum nec finibus tincidunt, lectus justo efficitur arcu, sed pellentesque ipsum mi eget risus. Proin auctor nulla at est viverra, sit amet faucibus magna gravida. Nullam eu augue vitae orci ornare mattis. Vivamus varius et tellus a feugiat. Duis id neque eget felis luctus malesuada. In nulla turpis, scelerisque eget mattis rutrum, congue quis velit. Ut ultrices orci lectus, accumsan egestas lacus iaculis eu.</string>
+    <string name="title_info_market">Dados do comércio</string>
+    <string name="hint_name">Nome</string>
+    <string name="txt_open">Aberto</string>
+    <string name="txt_location">Localização</string>
+
 </resources>
