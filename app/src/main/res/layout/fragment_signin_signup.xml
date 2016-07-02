@@ -22,8 +22,8 @@
             android:textColor="@color/fbutton_color_clouds"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            fbutton:buttonColor="@color/fbutton_color_peter_river"
-            fbutton:shadowColor="@color/fbutton_color_belize_hole"
+            fbutton:buttonColor="@color/colorPrimary"
+            fbutton:shadowColor="@color/colorPrimaryDark"
             android:layout_marginRight="@dimen/margin_default"
             fbutton:theme="@style/textbold"/>
 

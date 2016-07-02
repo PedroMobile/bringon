@@ -15,19 +15,29 @@
         android:paddingRight="@dimen/margin_large"
         android:paddingLeft="@dimen/margin_large"
         android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_login"
-            android:layout_marginBottom="@dimen/margin_default"
             android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
-            android:layout_marginBottom="@dimen/margin_default"
             android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_signin"
@@ -36,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             fbutton:theme="@style/textbold"
-            fbutton:buttonColor="@color/fbutton_color_peter_river"
-            fbutton:shadowColor="@color/fbutton_color_belize_hole"
+            fbutton:buttonColor="@color/colorPrimary"
+            fbutton:shadowColor="@color/colorPrimaryDark"
             android:layout_marginTop="@dimen/margin_default"
             android:layout_marginBottom="@dimen/margin_default"/>
 
