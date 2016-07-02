@@ -35,7 +35,7 @@
             </android.support.design.widget.TextInputLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="@dimen/cell_default"
                 android:paddingLeft="@dimen/margin_default"
                 android:paddingRight="@dimen/margin_default"
                 >
@@ -60,7 +60,9 @@
                 android:layout_marginRight="@dimen/margin_default"/>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="@dimen/cell_default"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
                 android:paddingLeft="@dimen/margin_default"
                 android:paddingRight="@dimen/margin_default"
                 >
