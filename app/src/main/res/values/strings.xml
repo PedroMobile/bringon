@@ -37,7 +37,13 @@
 Pellentesque sapien arcu, laoreet hendrerit purus non, efficitur accumsan ante. Integer id erat enim. Nullam elementum mi vitae vehicula sodales. Quisque vel placerat est. Quisque vehicula, ipsum nec finibus tincidunt, lectus justo efficitur arcu, sed pellentesque ipsum mi eget risus. Proin auctor nulla at est viverra, sit amet faucibus magna gravida. Nullam eu augue vitae orci ornare mattis. Vivamus varius et tellus a feugiat. Duis id neque eget felis luctus malesuada. In nulla turpis, scelerisque eget mattis rutrum, congue quis velit. Ut ultrices orci lectus, accumsan egestas lacus iaculis eu.</string>
     <string name="title_info_market">Dados do comércio</string>
     <string name="hint_name">Nome</string>
+    <string name="hint_phone">Telefone</string>
     <string name="txt_open">Aberto</string>
     <string name="txt_location">Localização</string>
+    <string name="txt_title">Título</string>
+    <string name="txt_products">Produtos</string>
+    <string name="txt_orders_in_progress">Pedidos em andamento</string>
+    <string name="txt_sales">Vendas</string>
+    <string name="txt_sales_history">Histórico de vendas</string>
 
 </resources>
