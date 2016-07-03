@@ -9,6 +9,7 @@ import android.support.design.widget.TextInputLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import br.com.pedrosousa.bringon.R;
 public class IconTextInputLayout  extends RelativeLayout {
 
     LayoutInflater mInflater;
+    EditText editText;
 
     public IconTextInputLayout(Context context) {
         super(context);
@@ -45,7 +47,9 @@ public class IconTextInputLayout  extends RelativeLayout {
 
     private View init(Context context){
         mInflater = LayoutInflater.from(context);
-        return mInflater.inflate(R.layout.view_icon_text_input, this, true);
+        View v = mInflater.inflate(R.layout.view_icon_text_input, this, true);
+        editText = (EditText) v.findViewById(R.id.txt);
+        return v;
     }
 
     private void init(Context context, AttributeSet attrs){
@@ -56,6 +60,7 @@ public class IconTextInputLayout  extends RelativeLayout {
 
         View v = init(context);
         TextInputLayout txtInput = (TextInputLayout) v.findViewById(R.id.txt_input);
+
         ImageView icon = (ImageView) v.findViewById(R.id.icon);
         try {
             String label = a.getString(R.styleable.IconTextInputLayout_txt_hint);
@@ -65,5 +70,9 @@ public class IconTextInputLayout  extends RelativeLayout {
         } finally {
             a.recycle();
         }
+    }
+
+    public EditText getEditText() {
+        return editText;
     }
 }

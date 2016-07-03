@@ -29,15 +29,23 @@
                     android:layout_margin="@dimen/margin_half"
                     android:text="@string/title_info_market"/>
                 <br.com.pedrosousa.bringon.widget.IconTextInputLayout
+                    android:id="@+id/input_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     icon_text_input_layout:txt_hint="@string/hint_name"
                     icon_text_input_layout:icon_txt_input="@mipmap/ic_account_grey600_24dp"/>
                 <br.com.pedrosousa.bringon.widget.IconTextInputLayout
+                    android:id="@+id/input_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     icon_text_input_layout:txt_hint="@string/hint_phone"
                     icon_text_input_layout:icon_txt_input="@mipmap/ic_phone_grey600_24dp"/>
+                <br.com.pedrosousa.bringon.widget.IconTextInputLayout
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    icon_text_input_layout:txt_hint="@string/hint_email"
+                    icon_text_input_layout:icon_txt_input="@mipmap/ic_email_grey600_24dp"/>
                 <br.com.pedrosousa.bringon.widget.IconSwitchView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
