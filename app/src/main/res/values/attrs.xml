@@ -4,4 +4,9 @@
         <attr name="label" format="string" />
         <attr name="icon_row" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="IconTextInputLayout">
+        <attr name="txt_hint" format="string" />
+        <attr name="icon_txt_input" format="reference" />
+    </declare-styleable>
 </resources>
