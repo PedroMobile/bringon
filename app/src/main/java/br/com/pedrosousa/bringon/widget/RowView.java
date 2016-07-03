@@ -42,23 +42,18 @@ public class RowView extends RelativeLayout{
         init(context, attrs);
     }
 
-    private void init(Context context){
+    private View init(Context context){
         mInflater = LayoutInflater.from(context);
-
-        View v = mInflater.inflate(R.layout.view_row, this, true);
-
+       return mInflater.inflate(R.layout.view_row, this, true);
     }
 
     private void init(Context context, AttributeSet attrs){
-        mInflater = LayoutInflater.from(context);
         TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.RowView,
                 0, 0);
 
-
-
-        View v = mInflater.inflate(R.layout.view_row, this, true);
+        View v = init(context);
         TextView txtTitle = (TextView) v.findViewById(R.id.txt_title);
         ImageView icon = (ImageView) v.findViewById(R.id.icon);
         try {

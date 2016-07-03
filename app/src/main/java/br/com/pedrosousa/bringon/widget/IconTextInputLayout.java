@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,20 +43,19 @@ public class IconTextInputLayout  extends RelativeLayout {
         init(context, attrs);
     }
 
-    private void init(Context context){
+    private View init(Context context){
         mInflater = LayoutInflater.from(context);
-        mInflater.inflate(R.layout.view_icon_text_input, this, true);
+        return mInflater.inflate(R.layout.view_icon_text_input, this, true);
     }
 
     private void init(Context context, AttributeSet attrs){
-        mInflater = LayoutInflater.from(context);
         TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.IconTextInputLayout,
                 0, 0);
 
-        View v = mInflater.inflate(R.layout.view_icon_text_input, this, true);
-        TextInputEditText txtInput = (TextInputEditText) v.findViewById(R.id.txt_input);
+        View v = init(context);
+        TextInputLayout txtInput = (TextInputLayout) v.findViewById(R.id.txt_input);
         ImageView icon = (ImageView) v.findViewById(R.id.icon);
         try {
             String label = a.getString(R.styleable.IconTextInputLayout_txt_hint);

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/margin_default"
-    android:paddingRight="@dimen/margin_default"
+    android:paddingRight="@dimen/margin_half_default"
     android:orientation="horizontal"
     android:gravity="center_vertical">
     <ImageView
@@ -12,9 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/margin_half"
         android:src="@mipmap/ic_cart_black_24dp"/>
-    <android.support.design.widget.TextInputEditText
+    <android.support.design.widget.TextInputLayout
         android:id="@+id/txt_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_name"/>
+        android:hint="@string/hint_name">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
