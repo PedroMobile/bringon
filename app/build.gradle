@@ -50,5 +50,8 @@ dependencies {
     // Enabling multidex support.
     compile 'com.android.support:multidex:1.0.1'
 
+    //A circular ImageView for Android
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
 }
 apply plugin: 'com.google.gms.google-services'

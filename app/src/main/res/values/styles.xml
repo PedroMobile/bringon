@@ -48,4 +48,18 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/margin_default</item>
+        <item name="android:layout_marginRight">@dimen/margin_default</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/md_grey_300</item>
+
+    </style>
+
+    <style name="GreenButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="colorButtonNormal">@color/md_green_600</item>
+    </style>
+
 </resources>
