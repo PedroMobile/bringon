@@ -7,6 +7,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -59,9 +60,12 @@ public class RowView extends RelativeLayout{
 
         View v = mInflater.inflate(R.layout.view_row, this, true);
         TextView txtTitle = (TextView) v.findViewById(R.id.txt_title);
+        ImageView icon = (ImageView) v.findViewById(R.id.icon);
         try {
             String label = a.getString(R.styleable.RowView_label);
+            int id_img = a.getResourceId(R.styleable.RowView_icon_row, R.mipmap.ic_account_black_24dp);
             txtTitle.setText(label);
+            icon.setImageResource(id_img);
         } finally {
             a.recycle();
         }

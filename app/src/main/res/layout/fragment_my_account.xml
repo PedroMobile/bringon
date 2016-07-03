@@ -81,12 +81,14 @@
                     <br.com.pedrosousa.bringon.widget.RowView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        row_view:label="@string/txt_change_password"/>
+                        row_view:label="@string/txt_change_password"
+                        row_view:icon_row="@mipmap/ic_key_grey600_24dp"/>
                     <View style="@style/Divider"/>
                     <br.com.pedrosousa.bringon.widget.RowView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        row_view:label="@string/txt_addresses"/>
+                        row_view:label="@string/txt_addresses"
+                        row_view:icon_row="@mipmap/ic_map_marker_grey600_24dp"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

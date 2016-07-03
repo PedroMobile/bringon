@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="RowView">
         <attr name="label" format="string" />
+        <attr name="icon_row" format="reference" />
     </declare-styleable>
 </resources>

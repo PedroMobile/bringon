@@ -7,10 +7,18 @@
     android:paddingLeft="@dimen/margin_default"
     android:paddingRight="@dimen/margin_default"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_default"
+        android:src="@mipmap/ic_cart_black_24dp"/>
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
         android:textSize="@dimen/text_size_medium"
         android:layout_centerVertical="true"
         android:text="@string/txt_title"/>
