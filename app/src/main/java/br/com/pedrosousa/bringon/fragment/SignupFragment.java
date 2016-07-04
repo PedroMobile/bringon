@@ -84,6 +84,19 @@ public class SignupFragment extends Fragment implements DatabaseReference.Comple
 
         return v;
     }
+    @Override
+    public void onStop(){
+        super.onStart();
+        if(authStateListener != null){
+            auth.removeAuthStateListener(authStateListener);
+        }
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        auth.addAuthStateListener(authStateListener);
+    }
 
     private void saveUser(){
         user.setEmail(edt_email.getText().toString());
@@ -126,7 +139,7 @@ public class SignupFragment extends Fragment implements DatabaseReference.Comple
     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
         auth.signOut();
         Toast.makeText(getActivity(), getResources().getString(R.string.conta_criada), Toast.LENGTH_LONG).show();
-        
+        getActivity().getFragmentManager().popBackStack();
     }
 
 
