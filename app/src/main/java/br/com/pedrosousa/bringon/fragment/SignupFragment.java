@@ -44,7 +44,7 @@ public class SignupFragment extends Fragment {
         email = edt_email.getText().toString();
         nome = edt_nome.getText().toString();
         senha = edt_senha.getText().toString();
-
+        
         return v;
     }
 
