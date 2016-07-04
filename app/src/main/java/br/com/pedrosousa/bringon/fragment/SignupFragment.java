@@ -32,7 +32,7 @@ public class SignupFragment extends Fragment {
     @BindView(R.id.edt_senha)
     EditText edt_senha;
 
-    private String email, nome, senha;
+    
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
