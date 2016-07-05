@@ -1,5 +1,6 @@
 package br.com.pedrosousa.bringon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import br.com.pedrosousa.bringon.fragment.CartsFragment;
 import br.com.pedrosousa.bringon.fragment.MapMarketsFragment;
@@ -119,7 +122,9 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_sign_out) {
-
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(NavigationActivity.this, SigninSignupActivity.class);
+            startActivity(intent);
         }
 
     }
