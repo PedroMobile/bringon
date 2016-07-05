@@ -59,7 +59,7 @@ public class User {
     }
 
     public void saveBd(DatabaseReference.CompletionListener... listener){
-        DatabaseReference firebase = FirebaseManager.getDatabaseReference();
+        DatabaseReference firebase = FirebaseManager.getDatabaseReference().child("user").child(getNome());
 
         if(listener.length == 0){
             firebase.setValue(this);
