@@ -49,5 +49,6 @@ Pellentesque sapien arcu, laoreet hendrerit purus non, efficitur accumsan ante. 
     <string name="title_profile">Meu perfil</string>
     <string name="hint_email">E-mail</string>
     <string name="txt_change_password">Trocar senha</string>
+    <string name="title_products">Produtos</string>
 
 </resources>
