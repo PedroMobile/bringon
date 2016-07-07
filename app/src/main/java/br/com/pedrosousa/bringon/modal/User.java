@@ -1,5 +1,6 @@
 package br.com.pedrosousa.bringon.modal;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 
 import br.com.pedrosousa.bringon.services.FirebaseManager;
@@ -16,6 +17,10 @@ public class User {
 
     public User() {
         
+    }
+
+    public User(DataSnapshot snapshot){
+
     }
 
     public String getId() {
@@ -59,7 +64,7 @@ public class User {
     }
 
     public void saveBd(DatabaseReference.CompletionListener... listener){
-        DatabaseReference firebase = FirebaseManager.getDatabaseReference().child("user").child(getNome());
+        DatabaseReference firebase = FirebaseManager.getDatabaseReference().child("user").child(getId());
 
         if(listener.length == 0){
             firebase.setValue(this);

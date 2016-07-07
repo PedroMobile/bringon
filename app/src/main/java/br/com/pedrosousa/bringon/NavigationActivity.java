@@ -2,6 +2,7 @@ package br.com.pedrosousa.bringon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
@@ -21,11 +22,18 @@ import android.widget.TextView;
 import com.google.android.gms.vision.text.Line;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import br.com.pedrosousa.bringon.fragment.CartsFragment;
 import br.com.pedrosousa.bringon.fragment.MapMarketsFragment;
 import br.com.pedrosousa.bringon.fragment.MyAccountFragment;
 import br.com.pedrosousa.bringon.fragment.MyMarketFragment;
+import br.com.pedrosousa.bringon.modal.User;
+import br.com.pedrosousa.bringon.services.FirebaseManager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -48,17 +56,20 @@ public class NavigationActivity extends AppCompatActivity
     TextView name_user;
     TextView email_user;
 
+
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
-
+    FirebaseDatabase databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
         ButterKnife.bind(this);
 
+        databaseReference = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
 
         setSupportActionBar(toolbar);
 
@@ -73,12 +84,12 @@ public class NavigationActivity extends AppCompatActivity
         onNavigationItemSelected(navigationView.getMenu().getItem(0));
 
         header = navigationView.getHeaderView(0);
-
         name_user = (TextView) header.findViewById(R.id.nav_name_user);
         email_user = (TextView) header.findViewById(R.id.nav_email_user);
 
-        name_user.setText(firebaseUser.getProviderId());
-        email_user.setText(firebaseUser.getEmail());
+        Snapshot();
+
+
 
     }
 
@@ -171,4 +182,11 @@ public class NavigationActivity extends AppCompatActivity
         // Commit the transaction
         transaction.commit();
     }
+
+    private void Snapshot(){
+
+
+
+    }
+
 }
