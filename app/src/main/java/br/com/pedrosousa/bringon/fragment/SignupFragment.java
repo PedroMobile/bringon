@@ -112,6 +112,7 @@ public class SignupFragment extends Fragment implements DatabaseReference.Comple
 
     private void createUserWithEmailAndPassword(){
         saveUser();
+        
         auth.createUserWithEmailAndPassword(user.getEmail(), user.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
