@@ -1,101 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:fbutton="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <include layout="@layout/fragment_logo"/>
+    <include layout="@layout/fragment_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingRight="@dimen/margin_large"
+        android:orientation="vertical"
         android:paddingLeft="@dimen/margin_large"
-        android:orientation="vertical">
+        android:paddingRight="@dimen/margin_large">
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_default">
+
             <EditText
+                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_login"
-                android:singleLine="true"/>
+                android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_default">
+            android:layout_height="match_parent">
+
             <EditText
+                android:id="@+id/edt_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_username"
-                android:singleLine="true"/>
+                android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_half">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:singleLine="true"/>
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/edt_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
+
         <RadioGroup
             android:id="@+id/radio_type_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <RadioButton
+                android:id="@+id/radio_store"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_store"
-                android:id="@+id/radio_store" />
+                android:text="@string/radio_store" />
+
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_cliente"
                 android:id="@+id/radio_cliente"
-                android:checked="true"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/radio_cliente" />
         </RadioGroup>
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_signup"
-            android:text="@string/btn_reg"
-            android:textColor="@color/fbutton_color_clouds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/btn_reg"
+            android:textColor="@color/fbutton_color_clouds"
             fbutton:buttonColor="@color/colorPrimary"
             fbutton:shadowColor="@color/colorPrimaryDark"
-            android:layout_marginTop="@dimen/margin_default"
-            android:layout_marginBottom="@dimen/margin_default"
-            fbutton:theme="@style/textbold"/>
+            fbutton:theme="@style/textbold" />
 
         <info.hoang8f.widget.FButton
             android:id="@+id/btn_signup_facebook"
-            android:text="@string/btn_reg_facebook"
-            android:textColor="@color/fbutton_color_clouds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/ic_facebook"
             android:paddingLeft="@dimen/margin_half"
             android:paddingRight="@dimen/margin_half"
+            android:text="@string/btn_reg_facebook"
+            android:textColor="@color/fbutton_color_clouds"
             fbutton:buttonColor="@color/facebook"
-            fbutton:theme="@style/textbold"/>
+            fbutton:theme="@style/textbold" />
 
         <br.com.pedrosousa.bringon.widget.HTMLTextView
             android:id="@+id/txt_go_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="@dimen/margin_default"
             android:paddingBottom="@dimen/margin_default"
-            android:text="@string/go_signin"/>
+            android:paddingTop="@dimen/margin_default"
+            android:text="@string/go_signin" />
     </LinearLayout>
 </RelativeLayout>

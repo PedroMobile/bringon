@@ -52,6 +52,12 @@ dependencies {
 
     //A circular ImageView for Android
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.google.firebase:firebase-core:9.0.2'
+    compile 'com.google.firebase:firebase-database:9.0.2'
+    compile 'com.google.firebase:firebase-auth:9.0.2'
+    compile 'com.google.firebase:firebase-crash:9.0.2'
+    compile 'com.google.firebase:firebase-messaging:9.0.2'
+
 
 }
 apply plugin: 'com.google.gms.google-services'
